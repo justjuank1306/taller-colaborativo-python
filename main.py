@@ -1,3 +1,6 @@
+from fibonacci import ejecutar_fibonacci
+from factorial import ejecutar_factorial
+
 def mostrar_menu():
     """Muestra el menú principal del programa"""
     print("\n" + "="*50)
@@ -18,20 +21,16 @@ def main():
             opcion = input("\nSeleccione una opción (1-5): ")
             
             if opcion == "1":
-                print("\n[Fibonacci - En desarrollo]")
-                # Aquí se llamará a la función de Fibonacci
+                ejecutar_fibonacci()
                 
             elif opcion == "2":
-                print("\n[Factorial - En desarrollo]")
-                # Aquí se llamará a la función de Factorial
+                ejecutar_factorial()
                 
             elif opcion == "3":
                 print("\n[Primos - En desarrollo]")
-                # Aquí se llamará a la función de Primos
                 
             elif opcion == "4":
                 print("\n[Números Perfectos - En desarrollo]")
-                # Aquí se llamará a la función de Números Perfectos
                 
             elif opcion == "5":
                 print("\n¡Gracias por usar el programa!")
