@@ -19,16 +19,16 @@ def ejecutar_fibonacci():
     try:
         n = int(input("¿Cuántos términos de Fibonacci desea calcular?: "))
         if n <= 0:
-            print("❌ Por favor ingrese un número positivo.")
+            print(" Por favor ingrese un número positivo.")
             return
         resultado = fibonacci(n)
-        print(f"\n✅ Serie de Fibonacci con {n} términos:")
+        print(f"\n Serie de Fibonacci con {n} términos:")
         print(resultado)
         print(f"\nÚltimo término: {resultado[-1]}")
     except ValueError:
-        print("❌ Error: Debe ingresar un número entero válido.")
+        print(" Error: Debe ingresar un número entero válido.")
     except Exception as e:
-        print(f"❌ Error inesperado: {e}")
+        print(f" Error inesperado: {e}")
 
 
 def factorial(n):
@@ -49,17 +49,17 @@ def ejecutar_factorial():
     try:
         n = int(input("Ingrese un número para calcular su factorial: "))
         if n < 0:
-            print("❌ El factorial no está definido para números negativos.")
+            print(" El factorial no está definido para números negativos.")
             return
         resultado = factorial(n)
-        print(f"\n✅ El factorial de {n} es: {resultado}")
+        print(f"\n El factorial de {n} es: {resultado}")
         if n <= 10:
             calculo = " × ".join(str(i) for i in range(1, n + 1)) if n > 0 else "1"
             print(f"Cálculo: {calculo} = {resultado}")
     except ValueError:
-        print("❌ Error: Debe ingresar un número entero válido.")
+        print(" Error: Debe ingresar un número entero válido.")
     except Exception as e:
-        print(f"❌ Error inesperado: {e}")
+        print(f" Error inesperado: {e}")
 
 
 def es_primo(n):
@@ -81,21 +81,21 @@ def ejecutar_primos():
     try:
         n = int(input("Ingrese un número para verificar si es primo: "))
         if n < 0:
-            print("❌ Los números negativos no se consideran primos.")
+            print(" Los números negativos no se consideran primos.")
             return
         if es_primo(n):
-            print(f"\n✅ El número {n} ES PRIMO")
+            print(f"\n El número {n} ES PRIMO")
         else:
-            print(f"\n❌ El número {n} NO es primo")
+            print(f"\n El número {n} NO es primo")
             if n > 1:
                 for i in range(2, n):
                     if n % i == 0:
                         print(f"   (Es divisible por {i})")
                         break
     except ValueError:
-        print("❌ Error: Debe ingresar un número entero válido.")
+        print(" Error: Debe ingresar un número entero válido.")
     except Exception as e:
-        print(f"❌ Error inesperado: {e}")
+        print(f" Error inesperado: {e}")
 
 
 def es_perfecto(n):
@@ -128,27 +128,27 @@ def ejecutar_perfectos():
     try:
         n = int(input("\n¿Cuántos números perfectos desea generar? (Recomendado: 1-3): "))
         if n <= 0:
-            print("❌ Por favor ingrese un número positivo.")
+            print(" Por favor ingrese un número positivo.")
             return
         if n > 3:
-            print("⚠️  Advertencia: Buscar más de 3 puede tardar mucho.")
+            print("  Advertencia: Buscar más de 3 puede tardar mucho.")
             confirmar = input("¿Continuar? (s/n): ")
             if confirmar.lower() != 's':
                 return
         print(f"\n🔍 Buscando los primeros {n} números perfectos...")
         perfectos = generar_perfectos(n)
         if len(perfectos) < n:
-            print(f"\n⚠️  Solo se encontraron {len(perfectos)} números.")
+            print(f"\n  Solo se encontraron {len(perfectos)} números.")
         else:
-            print(f"\n✅ Se encontraron {len(perfectos)} números perfectos:")
+            print(f"\n Se encontraron {len(perfectos)} números perfectos:")
         for i, (num, divisores) in enumerate(perfectos, 1):
             print(f"\n{i}. Número perfecto: {num}")
             print(f"   Divisores: {divisores}")
             print(f"   Suma: {sum(divisores)} = {num}")
     except ValueError:
-        print("❌ Error: Debe ingresar un número entero válido.")
+        print(" Error: Debe ingresar un número entero válido.")
     except Exception as e:
-        print(f"❌ Error inesperado: {e}")
+        print(f" Error inesperado: {e}")
 
 
 def mostrar_menu():
@@ -182,12 +182,12 @@ def main():
                 print("\n¡Gracias por usar el programa!")
                 break
             else:
-                print("\n❌ Opción inválida. Por favor seleccione 1-5.")
+                print("\n Opción inválida. Por favor seleccione 1-5.")
         except KeyboardInterrupt:
             print("\n\n¡Programa interrumpido por el usuario!")
             break
         except Exception as e:
-            print(f"\n❌ Error: {e}")
+            print(f"\n Error: {e}")
 
 if __name__ == "__main__":
     main()
